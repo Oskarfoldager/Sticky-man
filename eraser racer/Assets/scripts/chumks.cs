@@ -6,20 +6,34 @@ public class chumks : MonoBehaviour
 {
     public int platformsperrender;
     public GameObject platform;
-    private int chunknumber;
-    List<float> firstsetofnumbers = new List<float>() { 5.8f, 37.6f};
+    public Vector3 offsetcenterplayer;
+    public Transform chunks;
+    public Transform chunk1right;
+    public Transform box;
+    public float chunkdistance;
+    private float chunkrightx;
+    private float chunkrighty;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        /*
+        for (int i = 0; i < 500; i++)
+        {
+            var position = new Vector3(Random.Range(300f,0f),Random.Range(300f, -300f), 0f);
+            Instantiate(platform, position, Quaternion.identity);
+        }
+        */
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        chunkrightx = chunk1right.position.x;
+        chunkrighty = chunk1right.position.y;
+        // chunknumbery = Mathf.Round(31.8f / transform.position.y)*31.8f;
+        // chunknumberx = Mathf.Round(31.8f / transform.position.x) * 31.8f;
     }
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -27,49 +41,32 @@ public class chumks : MonoBehaviour
             switch (col.gameObject.tag)
             {
                 case "chunk1":
-                    for (int i = 0; i < platformsperrender; i++)
-                    {
-                    chunknumber = 1;
-                        Debug.Log("Creating new trashcan " + i);
-                        var position = new Vector3(Random.Range(5.8f, 37.6f), Random.Range(-10.7f, 20.4f), 0f);
-                        Instantiate(platform, position, Quaternion.identity);
-                    }
-                    break;
-                case "chunk2":
-                    chunknumber = 2;
-                    for (int i = 0; i < platformsperrender; i++)
-                    {
-                        Debug.Log("Creating new trashcan " + i);
-                        var position = new Vector3(Random.Range(firstsetofnumbers[1] * (chunknumber - 1),firstsetofnumbers[1] * (chunknumber - 1) + 31.8f), Random.Range(-10.7f, 20.4f), 0f);
-                        Instantiate(platform, position, Quaternion.identity);
-                    }
-                    break;
-                case "chunk3":
-                chunknumber = 3;
+                //positioning chunk
+                chunk1right.position = new Vector3(chunkrightx + chunkdistance, chunk1right.position.y, 0f);
+                //spawning new platforms around chunk
                 for (int i = 0; i < platformsperrender; i++)
                 {
-                    Debug.Log("Creating new trashcan " + i);
-                    var position = new Vector3(Random.Range(firstsetofnumbers[1] * (chunknumber - 1), firstsetofnumbers[1] * (chunknumber - 1) + 31.8f), Random.Range(-10.7f, 20.4f), 0f);
-                    Instantiate(platform, position, Quaternion.identity);
+                    var position2 = new Vector3(Random.Range((chunkrightx - chunkdistance / 2) + offsetcenterplayer.x + 100f, (chunkrightx + chunkdistance / 2) + offsetcenterplayer.x + 100f), Random.Range((chunkrighty - chunkdistance / 2) + offsetcenterplayer.y, (chunkrighty + chunkdistance / 2) + offsetcenterplayer.y), 0f);
+                    Instantiate(platform, position2, Quaternion.identity);
                 }
+                //breaking
                 break;
-                case "chunk4":
-                chunknumber = 4;
-                for (int i = 0; i < platformsperrender; i++)
-                {
-                    Debug.Log("Creating new trashcan " + i);
-                    var position = new Vector3(Random.Range(firstsetofnumbers[1] * (chunknumber - 1), firstsetofnumbers[1] * (chunknumber - 1) + 31.8f), Random.Range(-10.7f, 20.4f), 0f);
-                    Instantiate(platform, position, Quaternion.identity);
-                }
-                break;
-                case "chunk5":
-                    break;
-                case "chunk6":
-                    break;
-                case "chunk7":
-                    break;
             }
 
         
+    }
+    public void spawnnewchunk()
+    {
+        for (int i = 0; i < platformsperrender; i++)
+        {
+       // var position = new Vector3(Random.Range(31.8f * (chunknumberx), 31.8f * (chunknumberx) + 31.8f), Random.Range(31.8f * (chunknumbery) - 17, 31.8f * (chunknumbery) + 14.8f), 0f);
+      //  Instantiate(platform, position, Quaternion.identity);
+
+            // chunks.position = box.position + offsetcenterplayer;
+            //  chunks.position = new Vector3(chunks.position.x + chunknumberx, chunks.position.y + chunknumbery, 0f);
+            //chunk1right.position = new Vector3(chunknumberx * chunkdistance,chunk1right.position.y,0f);
+            //chunk2bottom.position = new Vector3(chunk1right.position.x, chunknumbery * chunkdistance, 0f);
+        }
+
     }
 }

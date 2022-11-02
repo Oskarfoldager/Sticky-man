@@ -19,10 +19,7 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private LayerMask groundlm;
     // Start is called before the first frame update
-    void Start()
-    {
 
-}
 
 
 
@@ -35,14 +32,20 @@ public class Movement : MonoBehaviour
 
 
             // Update is called once per frame
-            void Update()
+            
+    void Update()
     {
-        if (isgrounded() && Input.GetKey(KeyCode.Space) && touchground == false)
+        if (isgrounded() && Input.GetKey(KeyCode.W) && touchground == false)
         {
-           
+            Debug.Log("jumpup");
               rb.velocity = new Vector2(rb.velocity.x,jumpspeed);
         }
-        
+        if (Input.GetKey(KeyCode.S))
+        {
+            Debug.Log("jumpdown");
+            rb.velocity = new Vector2(rb.velocity.x, jumpspeed * -1);
+        }
+
 
 
 
