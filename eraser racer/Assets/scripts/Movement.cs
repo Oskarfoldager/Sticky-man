@@ -11,7 +11,8 @@ public class Movement : MonoBehaviour
     public bool touchground;
     public BoxCollider2D bx2d;
     public Transform playertransform;
-
+    public KeyCode up;
+    public KeyCode down;
     public Collider2D whathit;
 
     public Vector2 velocity;
@@ -35,12 +36,12 @@ public class Movement : MonoBehaviour
             
     void Update()
     {
-        if (isgrounded() && Input.GetKey(KeyCode.W) && touchground == false)
+        if (isgrounded() && Input.GetKey(up) && touchground == false)
         {
             Debug.Log("jumpup");
               rb.velocity = new Vector2(rb.velocity.x,jumpspeed);
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(down))
         {
             Debug.Log("jumpdown");
             rb.velocity = new Vector2(rb.velocity.x, jumpspeed * -1);

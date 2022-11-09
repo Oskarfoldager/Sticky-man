@@ -5,6 +5,7 @@ public class force : MonoBehaviour
 {
     // Movement speed
     public float speed = 2;
+    public Transform playertransform;
 
     // Use this for initialization
     void Start()
@@ -16,6 +17,6 @@ public class force : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        transform.position = new Vector3(transform.position.x,playertransform.position.y,transform.position.z);
     }
 }

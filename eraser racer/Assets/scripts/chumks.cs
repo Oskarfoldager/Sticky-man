@@ -9,7 +9,6 @@ public class chumks : MonoBehaviour
     public Vector3 offsetcenterplayer;
     public Transform chunks;
     public Transform chunk1right;
-    public Transform box;
     public float chunkdistance;
     private float chunkrightx;
     private float chunkrighty;
