@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/settings.unity
     guid: e1d9f156600d881429c9901f7aca92da
+  - enabled: 1
+    path: Assets/Scenes/thomsen.unity
+    guid: 6938e11973461c740b13b440a1837516
+  - enabled: 1
+    path: Assets/Scenes/extra.unity
+    guid: 22afc0763db14384db4024a17432b9f6
   m_configObjects: {}
