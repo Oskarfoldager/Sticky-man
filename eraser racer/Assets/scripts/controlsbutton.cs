@@ -7,6 +7,6 @@ public class controlsbutton : MonoBehaviour
 {
     public void play9090()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 }

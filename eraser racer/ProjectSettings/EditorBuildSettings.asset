@@ -6,14 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/mainmenu.unity
+    guid: b70df15038322ce43b6a7f1e377e4641
+  - enabled: 1
     path: Assets/Scenes/den_bruger_vi_nok_ikke.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/controls.unity
     guid: 3e2e0e2db5c9bef419b2b4c98486cde7
-  - enabled: 1
-    path: Assets/Scenes/mainmenu.unity
-    guid: b70df15038322ce43b6a7f1e377e4641
   - enabled: 1
     path: Assets/Scenes/play.unity
     guid: 424b7098d859d804887fac818defa74e
@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/extra.unity
     guid: 22afc0763db14384db4024a17432b9f6
+  - enabled: 1
+    path: Assets/Scenes/player2won.unity
+    guid: 3fbb5cdc0f1b0f74f89839fa7140d01e
   m_configObjects: {}
