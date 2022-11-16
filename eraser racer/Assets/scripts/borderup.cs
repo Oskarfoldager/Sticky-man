@@ -20,11 +20,11 @@ public class borderup : MonoBehaviour
     {
         if(collision.gameObject.tag == "borderdown")
         {
-            transform.position = new Vector3(transform.position.x, 55, transform.position.z);
+            transform.position = new Vector3(transform.position.x, 32, transform.position.z);
         }
         else if (collision.gameObject.tag == "borderup")
         {
-            transform.position = new Vector3(transform.position.x, -44, transform.position.z);
+            transform.position = new Vector3(transform.position.x, -32, transform.position.z);
         }
     }
 }
