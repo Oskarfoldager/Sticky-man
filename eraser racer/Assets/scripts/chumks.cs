@@ -12,6 +12,8 @@ public class chumks : MonoBehaviour
     public float chunkdistance;
     private float chunkrightx;
     private float chunkrighty;
+    public GameObject paperandborders;
+    public Vector2 offsetonpaper;
 
 
     // Start is called before the first frame update
@@ -43,6 +45,8 @@ public class chumks : MonoBehaviour
                 //positioning chunk
                 chunk1right.position = new Vector3(chunkrightx + chunkdistance, chunk1right.position.y, 0f);
                 //spawning new platforms around chunk
+                var position3 = new Vector3(chunkrightx + offsetonpaper.x,chunkrighty + offsetonpaper.y);
+                Instantiate(paperandborders, position3, Quaternion.identity);
                 for (int i = 0; i < platformsperrender; i++)
                 {
                     var position2 = new Vector3(Random.Range((chunkrightx - chunkdistance / 2) + offsetcenterplayer.x + 100f, (chunkrightx + chunkdistance / 2) + offsetcenterplayer.x + 100f), Random.Range((chunkrighty - chunkdistance / 2) + offsetcenterplayer.y, (chunkrighty + chunkdistance / 2) + offsetcenterplayer.y), 0f);
