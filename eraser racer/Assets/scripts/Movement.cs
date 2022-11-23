@@ -46,7 +46,6 @@ public class Movement : MonoBehaviour
         {
             Debug.Log("jumpdown");
             rb.velocity = new Vector2(rb.velocity.x, jumpspeed * -1);
-            sfxmanager.sfxinstance.Audio.PlayOneShot(sfxmanager.sfxinstance.testsound);
         }
 
 

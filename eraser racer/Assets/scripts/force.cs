@@ -13,7 +13,6 @@ public class force : MonoBehaviour
     {
         timeofnewspeed = Time.time + 10;
         // Fly towards the right
-        GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
     }
 
     // Update is called once per frame
@@ -25,6 +24,7 @@ public class force : MonoBehaviour
             speed *= 1.4f;
             timeofnewspeed += 10;
         }
-        transform.position = new Vector3(transform.position.x,playertransform.position.y,transform.position.z);
+        /*setting y to players y*/transform.position = new Vector3(transform.position.x,playertransform.position.y,transform.position.z);
+        /*moving the eraser*/transform.position = new Vector3(transform.position.x + speed, playertransform.position.y, transform.position.z);
     }
 }
