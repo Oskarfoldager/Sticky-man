@@ -5,6 +5,7 @@ using UnityEngine;
 public class Powerups : MonoBehaviour
 {
     // Start is called before the first frame update
+    public float timer;
     void Start()
     {
         
@@ -28,11 +29,30 @@ public class Powerups : MonoBehaviour
         case"GravityChange":
         Gravityswitch();
         break;
-      }
+        case "Slower":
+        Turtle();
+        break;
+        }
     }
     public void Kaninchen()
     {
-
+        StartCoroutine(FasterCoroutine());
+    }
+    public void Turtle()
+    {
+        StartCoroutine(SlowerCoroutine());
+    }
+    IEnumerator FasterCoroutine()
+    {
+        momentum.maxspeed = 20;
+        yield return new WaitForSeconds(20);
+        momentum.maxspeed = 10;
+    }
+    IEnumerator SlowerCoroutine()
+    {
+        momentum.maxspeed = 5;
+        yield return new WaitForSeconds(20);
+        momentum.maxspeed = 10;
     }
     public void rocketship()
     {
@@ -52,5 +72,6 @@ public class Powerups : MonoBehaviour
         }
 
     }
+   
 
 }
