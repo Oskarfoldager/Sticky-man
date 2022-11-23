@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/player2won.unity
     guid: 3fbb5cdc0f1b0f74f89839fa7140d01e
+  - enabled: 1
+    path: Assets/Scenes/playeronewon.unity
+    guid: ad30302a39fd3844f94cb76f4cde8150
   m_configObjects: {}
