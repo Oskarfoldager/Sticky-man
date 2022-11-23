@@ -517,6 +517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformsperrender: 45
+  powerupssperrender: 123
   platform: {fileID: 177079350}
   offsetcenterplayer: {x: 0, y: 0, z: 0}
   chunks: {fileID: 1285066135}
@@ -524,6 +525,10 @@ MonoBehaviour:
   chunkdistance: 100
   paperandborders: {fileID: 661126765}
   offsetonpaper: {x: 290, y: -40}
+  power1: {fileID: 2142751065854989278, guid: 3f9e6b22a5ac9d24182efd1e2bd94129, type: 3}
+  power2: {fileID: 2142751065854989278, guid: c6ffa94c66fc42e41bcadc2dc604bba4, type: 3}
+  power3: {fileID: 2142751065854989278, guid: cfd6fe0d1cc6c3a48bbca32af9e57085, type: 3}
+  powerups: []
 --- !u!114 &95142495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1807,6 +1812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformsperrender: 45
+  powerupssperrender: 123
   platform: {fileID: 177079350}
   offsetcenterplayer: {x: 0, y: 0, z: 0}
   chunks: {fileID: 1285066135}
@@ -1814,6 +1820,10 @@ MonoBehaviour:
   chunkdistance: 100
   paperandborders: {fileID: 661126765}
   offsetonpaper: {x: 290, y: -40}
+  power1: {fileID: 2142751065854989278, guid: 3f9e6b22a5ac9d24182efd1e2bd94129, type: 3}
+  power2: {fileID: 2142751065854989278, guid: 6c84a3d4064026e4fa1281f6b8393e78, type: 3}
+  power3: {fileID: 2142751065854989278, guid: cfd6fe0d1cc6c3a48bbca32af9e57085, type: 3}
+  powerups: []
 --- !u!114 &725176785
 MonoBehaviour:
   m_ObjectHideFlags: 0

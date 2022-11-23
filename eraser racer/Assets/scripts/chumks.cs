@@ -5,6 +5,7 @@ using UnityEngine;
 public class chumks : MonoBehaviour
 {
     public int platformsperrender;
+    public int powerupssperrender;
     public GameObject platform;
     public Vector3 offsetcenterplayer;
     public Transform chunks;
@@ -14,11 +15,16 @@ public class chumks : MonoBehaviour
     private float chunkrighty;
     public GameObject paperandborders;
     public Vector2 offsetonpaper;
+    public GameObject power1;
+    public GameObject power2;
+    public GameObject power3;
+    public List<GameObject> powerups;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        powerups = new List<GameObject>() { power1, power2, power3 };
         /*
         for (int i = 0; i < 500; i++)
         {
@@ -52,6 +58,12 @@ public class chumks : MonoBehaviour
                     var position2 = new Vector3(Random.Range((chunkrightx - chunkdistance / 2) + offsetcenterplayer.x + 100f, (chunkrightx + chunkdistance / 2) + offsetcenterplayer.x + 100f), Random.Range((chunkrighty - chunkdistance / 2) + offsetcenterplayer.y, (chunkrighty + chunkdistance / 2) + offsetcenterplayer.y), 0f);
                     Instantiate(platform, position2, Quaternion.identity);
                 }
+                for (int i = 0; i < powerupssperrender; i++)
+                {
+                    var position4 = new Vector3(Random.Range((chunkrightx - chunkdistance / 2) + offsetcenterplayer.x + 100f, (chunkrightx + chunkdistance / 2) + offsetcenterplayer.x + 100f), Random.Range((chunkrighty - chunkdistance / 2) + offsetcenterplayer.y, (chunkrighty + chunkdistance / 2) + offsetcenterplayer.y), 0f);
+                    Instantiate(powerups[Random.Range(0, 3)], position4, Quaternion.identity);
+                }
+
                 //breaking
                 break;
             }
