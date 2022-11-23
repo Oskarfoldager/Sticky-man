@@ -40,6 +40,7 @@ public class Movement : MonoBehaviour
         {
             Debug.Log("jumpup");
               rb.velocity = new Vector2(rb.velocity.x,jumpspeed);
+            sfxmanager.sfxinstance.Audio.PlayOneShot(sfxmanager.sfxinstance.testsound);
         }
         if (Input.GetKey(down))
         {

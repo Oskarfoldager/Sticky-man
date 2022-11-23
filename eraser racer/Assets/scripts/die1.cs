@@ -17,16 +17,16 @@ public class die1 : MonoBehaviour
     {
 
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "eraser1")
         {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(8);
 
         }
         else if (collision.gameObject.tag == "eraser2")
         {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(7);
 
         }
     }
