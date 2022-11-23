@@ -53,8 +53,8 @@ public class Movement : MonoBehaviour
     }
     private bool isgrounded()
     {
-          float extraheight = .02f;
-    RaycastHit2D raycastHit = Physics2D.Raycast(bx2d.bounds.center, Vector2.down, bx2d.bounds.extents.y + extraheight, groundlm);
+        float extraheight = .02f;
+        RaycastHit2D raycastHit = Physics2D.Raycast(bx2d.bounds.center, Vector2.down, bx2d.bounds.extents.y + extraheight, groundlm);
         Color raycolor;
         if (raycastHit.collider != null){
             raycolor = Color.green;
