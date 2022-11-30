@@ -517,9 +517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f3893c01a4cd043ba8f331ff154c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformsperrender: 45
-  powerupssperrender: 123
-  platform: {fileID: 177079350}
+  platformsperrender: 20
+  powerupssperrender: 15
   offsetcenterplayer: {x: 0, y: 0, z: 0}
   chunks: {fileID: 1285066135}
   chunk1right: {fileID: 3177246}
@@ -527,9 +526,22 @@ MonoBehaviour:
   paperandborders: {fileID: 661126765}
   offsetonpaper: {x: 290, y: -40}
   power1: {fileID: 2142751065854989278, guid: 3f9e6b22a5ac9d24182efd1e2bd94129, type: 3}
-  power2: {fileID: 2142751065854989278, guid: c6ffa94c66fc42e41bcadc2dc604bba4, type: 3}
-  power3: {fileID: 2142751065854989278, guid: cfd6fe0d1cc6c3a48bbca32af9e57085, type: 3}
+  power2: {fileID: 2142751065854989278, guid: 6c84a3d4064026e4fa1281f6b8393e78, type: 3}
+  power3: {fileID: 2142751065854989278, guid: c6ffa94c66fc42e41bcadc2dc604bba4, type: 3}
+  platform1: {fileID: 7580160637016425103, guid: 2a4c7da24b118ac4e8d989e3d0067474, type: 3}
+  platform2: {fileID: 248929812013022359, guid: 66733cc92158dc24fbc2c4a97563aa90, type: 3}
+  platform3: {fileID: 4439791732791082018, guid: 0bde773c598a8034697649a8250b1141, type: 3}
+  platform4: {fileID: 5229282848322395520, guid: ad19c3cf20080bd4d9cc09402cdada35, type: 3}
+  platform5: {fileID: 588776808687007934, guid: d5466a35e853b5d4b879e9dc7dfc3d34, type: 3}
+  platform6: {fileID: 233295813225893973, guid: cb7a12d2da74c4e43b15a337694ae614, type: 3}
+  platform7: {fileID: 469655439380533327, guid: dcfff11a048855044aa74587dd93852a, type: 3}
+  platform8: {fileID: 7243549114494638927, guid: f9a18bf83605b24419a0018ea3603669, type: 3}
+  platform9: {fileID: 5918778197707607642, guid: 1ab9d3041f94f104f9f6b022939d0a6d, type: 3}
+  platform10: {fileID: 5842025486958446755, guid: 159fa024a4302eb4aaf915751f42034b, type: 3}
+  platform11: {fileID: 5514246531774436981, guid: 899da05bf6e185c47aa9d836c828590e, type: 3}
+  platform12: {fileID: 8026345480652708512, guid: b8c15c0a4d9b94b4dbd86ba59f94999c, type: 3}
   powerups: []
+  platforms: []
 --- !u!114 &95142495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -718,6 +730,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   cameroonthis: {fileID: 889387669}
+  player: {fileID: 95142490}
+  playerrb: {fileID: 95142497}
+  jumpspeed: 25
 --- !u!1 &128296926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1826,9 +1841,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f3893c01a4cd043ba8f331ff154c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformsperrender: 45
-  powerupssperrender: 123
-  platform: {fileID: 177079350}
+  platformsperrender: 20
+  powerupssperrender: 15
   offsetcenterplayer: {x: 0, y: 0, z: 0}
   chunks: {fileID: 1285066135}
   chunk1right: {fileID: 3177246}
@@ -1837,8 +1851,21 @@ MonoBehaviour:
   offsetonpaper: {x: 290, y: -40}
   power1: {fileID: 2142751065854989278, guid: 3f9e6b22a5ac9d24182efd1e2bd94129, type: 3}
   power2: {fileID: 2142751065854989278, guid: 6c84a3d4064026e4fa1281f6b8393e78, type: 3}
-  power3: {fileID: 2142751065854989278, guid: cfd6fe0d1cc6c3a48bbca32af9e57085, type: 3}
+  power3: {fileID: 2142751065854989278, guid: c6ffa94c66fc42e41bcadc2dc604bba4, type: 3}
+  platform1: {fileID: 7580160637016425103, guid: 2a4c7da24b118ac4e8d989e3d0067474, type: 3}
+  platform2: {fileID: 248929812013022359, guid: 66733cc92158dc24fbc2c4a97563aa90, type: 3}
+  platform3: {fileID: 4439791732791082018, guid: 0bde773c598a8034697649a8250b1141, type: 3}
+  platform4: {fileID: 5229282848322395520, guid: ad19c3cf20080bd4d9cc09402cdada35, type: 3}
+  platform5: {fileID: 588776808687007934, guid: d5466a35e853b5d4b879e9dc7dfc3d34, type: 3}
+  platform6: {fileID: 233295813225893973, guid: cb7a12d2da74c4e43b15a337694ae614, type: 3}
+  platform7: {fileID: 469655439380533327, guid: dcfff11a048855044aa74587dd93852a, type: 3}
+  platform8: {fileID: 7243549114494638927, guid: f9a18bf83605b24419a0018ea3603669, type: 3}
+  platform9: {fileID: 5918778197707607642, guid: 1ab9d3041f94f104f9f6b022939d0a6d, type: 3}
+  platform10: {fileID: 5842025486958446755, guid: 159fa024a4302eb4aaf915751f42034b, type: 3}
+  platform11: {fileID: 5514246531774436981, guid: 899da05bf6e185c47aa9d836c828590e, type: 3}
+  platform12: {fileID: 8026345480652708512, guid: b8c15c0a4d9b94b4dbd86ba59f94999c, type: 3}
   powerups: []
+  platforms: []
 --- !u!114 &725176785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1925,6 +1952,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   cameroonthis: {fileID: 269236454}
+  player: {fileID: 725176776}
+  playerrb: {fileID: 725176787}
+  jumpspeed: 25
 --- !u!1 &889387669
 GameObject:
   m_ObjectHideFlags: 0

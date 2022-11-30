@@ -7,6 +7,9 @@ public class Powerups : MonoBehaviour
     // Start is called before the first frame update
     public float timer;
     public GameObject cameroonthis;
+    public GameObject player;
+    public Rigidbody2D playerrb;
+    public float jumpspeed;
     void Start()
     {
         
@@ -58,7 +61,7 @@ public class Powerups : MonoBehaviour
     }
     public void rocketship()
     {
-
+        playerrb.velocity = new Vector2(playerrb.velocity.x, jumpspeed);
     }
     /*
     public void Gravityswitch()
