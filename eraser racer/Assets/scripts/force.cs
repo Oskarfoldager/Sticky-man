@@ -21,7 +21,7 @@ public class force : MonoBehaviour
         if (Time.time > timeofnewspeed)
         {
             Debug.Log("newspeed");
-            speed *= 1.4f;
+            speed *= 2.2f;
             timeofnewspeed += 10;
         }
         /*setting y to players y*/transform.position = new Vector3(transform.position.x,playertransform.position.y,transform.position.z);

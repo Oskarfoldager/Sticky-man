@@ -10,6 +10,7 @@ public class Powerups : MonoBehaviour
     public GameObject player;
     public Rigidbody2D playerrb;
     public float jumpspeed;
+    public momentum momentum;
     void Start()
     {
         

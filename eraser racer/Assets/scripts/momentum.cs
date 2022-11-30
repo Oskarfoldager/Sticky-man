@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class momentum : MonoBehaviour
 {
-    public static float maxspeed = 10;
+    public float maxspeed = 10;
     public Rigidbody2D rb2d;
     // Start is called before the first frame update
     void Start()
