@@ -6,6 +6,7 @@ public class Powerups : MonoBehaviour
 {
     // Start is called before the first frame update
     public float timer;
+    public GameObject cameroonthis;
     void Start()
     {
         
@@ -21,16 +22,16 @@ public class Powerups : MonoBehaviour
       switch (col.gameObject.tag)
       {
         case "Faster":
-        Kaninchen();
+                Destroy(col.gameObject);
+                Kaninchen();
         break;
         case"rocket":
-        rocketship();
-        break;
-        case"GravityChange":
-        Gravityswitch();
+                Destroy(col.gameObject);
+                rocketship();
         break;
         case "Slower":
-        Turtle();
+                Destroy(col.gameObject);
+                Turtle();
         break;
         }
     }
@@ -45,33 +46,38 @@ public class Powerups : MonoBehaviour
     IEnumerator FasterCoroutine()
     {
         momentum.maxspeed = 20;
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(15);
         momentum.maxspeed = 10;
+
     }
     IEnumerator SlowerCoroutine()
     {
         momentum.maxspeed = 5;
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(15);
         momentum.maxspeed = 10;
     }
     public void rocketship()
     {
 
     }
+    /*
     public void Gravityswitch()
     {
-        if(transform.eulerAngles == new Vector3 (0, 180, 180))
+        if(transform.eulerAngles == new Vector3 (0,180 , 180))
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
+            cameroonthis.transform.eulerAngles = new Vector3(0, 0, 0);
             Physics2D.gravity = new Vector2(0, -9.8f);
         }
         else
         {
             transform.eulerAngles = new Vector3(0, 180, 180);
+            cameroonthis.transform.eulerAngles = new Vector3(0, 180, 180);
             Physics2D.gravity = new Vector2(0, 9.8f);
         }
 
     }
+    */
    
 
 }

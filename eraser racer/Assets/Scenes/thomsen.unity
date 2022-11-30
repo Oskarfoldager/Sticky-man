@@ -717,6 +717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
+  cameroonthis: {fileID: 889387669}
 --- !u!1 &128296926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1923,6 +1924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
+  cameroonthis: {fileID: 269236454}
 --- !u!1 &889387669
 GameObject:
   m_ObjectHideFlags: 0
