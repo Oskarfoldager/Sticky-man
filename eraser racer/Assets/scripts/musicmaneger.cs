@@ -12,20 +12,34 @@ public class musicmaneger : MonoBehaviour
     public GameObject musicplayer;
 
     private void Awake()
-    {
+    {/*
+        //  Audio2.volume = 1;
         if (bcminstance != null && bcminstance != this || builderbob == 5)
         {
             Debug.Log("we are getting rid of this");
-            Destroy(this.gameObject);
-            musicplayer.SetActive(false);
+            Audio2.volume = 0;
             return;
         }
-        bcminstance = this;
-        DontDestroyOnLoad(this);
+        else
+        {
+            DontDestroyOnLoad(this);
+        }
+        */
     }
     public void Update()
     {
         currentscene = SceneManager.GetActiveScene();
         builderbob = currentscene.buildIndex;
+        if ( builderbob == 5)
+        {
+            Debug.Log("we are getting rid of this");
+            Destroy(this.gameObject);
+
+        }
+        else
+        {
+            DontDestroyOnLoad(this);
+        }
+
     }
 }
