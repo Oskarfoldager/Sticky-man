@@ -6,6 +6,7 @@ public class sfxmanager : MonoBehaviour
 {
     public AudioSource Audio;
     public AudioClip testsound;
+    public AudioClip soundofpowerup;
     public static sfxmanager sfxinstance;
     private void Awake()
     {

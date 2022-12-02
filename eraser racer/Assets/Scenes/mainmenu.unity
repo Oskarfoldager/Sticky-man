@@ -390,6 +390,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d04caaaeea4dd74a9e51a8db40929c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &141866586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141866579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f9c095dcf084e4fa039c7f07f42024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &159797328
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,7 +415,7 @@ GameObject:
   - component: {fileID: 159797332}
   m_Layer: 0
   m_Name: music holder
-  m_TagString: Untagged
+  m_TagString: musicholder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -420,7 +432,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f8298fbc95968d9429b8fec4207cbf1c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.848
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1196,7 +1208,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1051096031, guid: 69888df806529bf4db0299d463ac5c33, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1272,7 +1284,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 905218495, guid: 69888df806529bf4db0299d463ac5c33, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1602,7 +1614,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -1531124938, guid: 69888df806529bf4db0299d463ac5c33, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

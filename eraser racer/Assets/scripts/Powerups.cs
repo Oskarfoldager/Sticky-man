@@ -27,14 +27,17 @@ public class Powerups : MonoBehaviour
       {
         case "Faster":
                 Destroy(col.gameObject);
+                sfxmanager.sfxinstance.Audio.PlayOneShot(sfxmanager.sfxinstance.soundofpowerup);
                 Kaninchen();
         break;
         case"rocket":
                 Destroy(col.gameObject);
+                sfxmanager.sfxinstance.Audio.PlayOneShot(sfxmanager.sfxinstance.soundofpowerup);
                 rocketship();
         break;
         case "Slower":
                 Destroy(col.gameObject);
+                sfxmanager.sfxinstance.Audio.PlayOneShot(sfxmanager.sfxinstance.soundofpowerup);
                 Turtle();
         break;
         }

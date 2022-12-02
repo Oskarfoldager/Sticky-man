@@ -10,6 +10,7 @@ public class musicmaneger : MonoBehaviour
     public Scene currentscene;
     public int builderbob;
     public GameObject musicplayer;
+    public static bool instancedestroyed;
 
     private void Awake()
     {/*
@@ -34,7 +35,22 @@ public class musicmaneger : MonoBehaviour
         {
             Debug.Log("we are getting rid of this");
             Destroy(this.gameObject);
+            instancedestroyed = false;
 
+        }
+        else if (builderbob == 2 || builderbob == 9)
+        {
+            instancedestroyed = false;
+
+        }
+        else if  (GameObject.FindGameObjectsWithTag("musicholder").Length > 1)
+        {
+            if (!instancedestroyed)
+            {
+                Debug.Log("we are getting rid of this");
+                Destroy(musicplayer);
+                instancedestroyed = true;
+            }
         }
         else
         {
